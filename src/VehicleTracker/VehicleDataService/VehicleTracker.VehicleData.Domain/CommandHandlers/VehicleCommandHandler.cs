@@ -15,7 +15,7 @@ namespace VehicleTracker.VehicleData.Domain.CommandHandlers
     public class VehicleCommandHandler : CommandHandler,
         IRequestHandler<AddNewVehicleCommand, bool>,
         IRequestHandler<UpdateVehicleCommand, bool>,
-        IRequestHandler<RemoveCustomerCommand, bool>
+        IRequestHandler<RemoveVehicleCommand, bool>
     {
         private readonly IVehicleRepository _vehicleRepository;
         private readonly IMediatorHandler _bus;
@@ -70,7 +70,7 @@ namespace VehicleTracker.VehicleData.Domain.CommandHandlers
             return Task.FromResult(true);
         }
 
-        public Task<bool> Handle(RemoveCustomerCommand message, CancellationToken cancellationToken)
+        public Task<bool> Handle(RemoveVehicleCommand message, CancellationToken cancellationToken)
         {
             if (!message.IsValid())
             {
@@ -82,7 +82,7 @@ namespace VehicleTracker.VehicleData.Domain.CommandHandlers
 
             if (Commit())
             {
-                _bus.RaiseEvent(new CustomerRemovedEvent(message.Id));
+                _bus.RaiseEvent(new VehicleRemovedEvent(message.Id));
             }
 
             return Task.FromResult(true);

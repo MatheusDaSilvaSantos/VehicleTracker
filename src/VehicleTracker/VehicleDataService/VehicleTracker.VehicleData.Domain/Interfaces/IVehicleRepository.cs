@@ -6,6 +6,6 @@ namespace VehicleTracker.VehicleData.Domain.Interfaces
 {
     public interface IVehicleRepository : IRepository<Vehicle>
     {
-        Customer GetByVehicleId(Guid vehicleId);
+        Vehicle GetByVehicleId(string vehicleId);
     }
 }
