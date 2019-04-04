@@ -11,6 +11,7 @@ using VehicleTracker.PingReceiver.Application.ViewModels;
 
 namespace VehicleTracker.PingReceiver.Service.Api.Controllers
 {
+    [Route("[controller]")]
     public class PingController : BaseApiController
     {
         private readonly IPingAppService _pingAppService;

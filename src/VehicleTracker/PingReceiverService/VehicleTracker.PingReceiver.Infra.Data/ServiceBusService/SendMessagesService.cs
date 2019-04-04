@@ -4,7 +4,6 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Microsoft.ServiceBus.Messaging;
 using Newtonsoft.Json;
 using VehicleTracker.Abstract.Domain.Core.Events;
 using VehicleTracker.PingReceiver.Domain.Interfaces;

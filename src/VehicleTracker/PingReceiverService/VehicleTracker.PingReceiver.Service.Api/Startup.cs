@@ -26,10 +26,6 @@ namespace VehicleTracker.PingReceiver.Service.Api
                 .AddJsonFile("appsettings.json", true, true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
 
-            if (env.IsDevelopment())
-            {
-                //builder.AddUserSecrets<Startup>();
-            }
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -66,8 +62,8 @@ namespace VehicleTracker.PingReceiver.Service.Api
                 s.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
-                    Title = "Simple Blog Project",
-                    Description = "Terkwaz evaluation task"
+                    Title = "Ping Receiver Service",
+                    Description = "Alten Code Challenge task"
                 });
                 s.EnableAnnotations();
             });
@@ -77,9 +73,6 @@ namespace VehicleTracker.PingReceiver.Service.Api
 
             // Adding MediatR for Domain Events and Notifications
             services.AddMediatR(typeof(Startup));
-
-            // Adding SignalR for real time notification
-            services.AddSignalR();
 
             // .NET Native DI Abstraction
             RegisterServices(services);
@@ -115,7 +108,7 @@ namespace VehicleTracker.PingReceiver.Service.Api
             app.UseSwagger();
             app.UseSwaggerUI(s =>
             {
-                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Simple Blog Project API v1.1");
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Ping Receiver API v1.1");
 
             });
 

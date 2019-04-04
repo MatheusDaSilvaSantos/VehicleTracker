@@ -69,17 +69,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.PingReceiver
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.PingReceiver.Infra.CrossCutting.IoC", "PingReceiverService\VehicleTracker.PingReceiver.Infra.CrossCutting.IoC\VehicleTracker.PingReceiver.Infra.CrossCutting.IoC.csproj", "{8FAB633B-9000-4B4B-9666-E2A0A096A947}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.VehicleData.Application", "VehicleDataService\VehicleTracker.VehicleData.Application\VehicleTracker.VehicleData.Application.csproj", "{0337BADE-E149-4D69-8030-4FD57D30A56A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.VehicleData.Application", "VehicleDataService\VehicleTracker.VehicleData.Application\VehicleTracker.VehicleData.Application.csproj", "{0337BADE-E149-4D69-8030-4FD57D30A56A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.VehicleData.Domain", "VehicleDataService\VehicleTracker.VehicleData.Domain\VehicleTracker.VehicleData.Domain.csproj", "{01164E4A-5DCC-4699-9681-E05F46F36D89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.VehicleData.Domain", "VehicleDataService\VehicleTracker.VehicleData.Domain\VehicleTracker.VehicleData.Domain.csproj", "{01164E4A-5DCC-4699-9681-E05F46F36D89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.VehicleData.Infra.Data", "VehicleDataService\VehicleTracker.VehicleData.Infra.Data\VehicleTracker.VehicleData.Infra.Data.csproj", "{B2BDC0FE-A076-4DBC-9897-0069A9E12709}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.VehicleData.Infra.Data", "VehicleDataService\VehicleTracker.VehicleData.Infra.Data\VehicleTracker.VehicleData.Infra.Data.csproj", "{B2BDC0FE-A076-4DBC-9897-0069A9E12709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.VehicleData.Infra.CrossCutting.IoC", "VehicleDataService\VehicleTracker.VehicleData.Infra.IoC\VehicleTracker.VehicleData.Infra.CrossCutting.IoC.csproj", "{7D9F289F-F616-43EB-9E38-6F01F195462F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.VehicleData.Infra.CrossCutting.IoC", "VehicleDataService\VehicleTracker.VehicleData.Infra.IoC\VehicleTracker.VehicleData.Infra.CrossCutting.IoC.csproj", "{7D9F289F-F616-43EB-9E38-6F01F195462F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.TrackerGui.WebUi", "TrackerGuiService\VehicleTracker.TrackerGui.WebUi\VehicleTracker.TrackerGui.WebUi.csproj", "{54B15FF5-F46F-4AFB-A8F5-A726BC854470}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.Service.ApiGateway", "ApiGatewayService\VehicleTracker.Service.ApiGateway\VehicleTracker.Service.ApiGateway.csproj", "{28B8AE8A-D9C8-4F75-B525-D6CA9DAC9B3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.TrackerEngine.PingQueueTrigger", "TrackerEngineService\VehicleTracker.TrackerEngine.PingQueueTrigger\VehicleTracker.TrackerEngine.PingQueueTrigger.csproj", "{9CBA3F57-E716-4294-A7F2-DB6ED6372236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +141,10 @@ Global
 		{28B8AE8A-D9C8-4F75-B525-D6CA9DAC9B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28B8AE8A-D9C8-4F75-B525-D6CA9DAC9B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28B8AE8A-D9C8-4F75-B525-D6CA9DAC9B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CBA3F57-E716-4294-A7F2-DB6ED6372236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CBA3F57-E716-4294-A7F2-DB6ED6372236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CBA3F57-E716-4294-A7F2-DB6ED6372236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CBA3F57-E716-4294-A7F2-DB6ED6372236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +188,7 @@ Global
 		{7D9F289F-F616-43EB-9E38-6F01F195462F} = {07250FE9-9AB6-47BD-BE8B-CFC3A6D51E1B}
 		{54B15FF5-F46F-4AFB-A8F5-A726BC854470} = {FFBC66E6-BF0B-4FF4-AF61-95AAA9486E5C}
 		{28B8AE8A-D9C8-4F75-B525-D6CA9DAC9B3F} = {0F74F206-4823-469B-BE03-505700FBD98A}
+		{9CBA3F57-E716-4294-A7F2-DB6ED6372236} = {7F127BE5-9AFD-487A-A01D-CECE78EAFB0E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {519D33D7-A24D-4DFC-88A2-648376180143}

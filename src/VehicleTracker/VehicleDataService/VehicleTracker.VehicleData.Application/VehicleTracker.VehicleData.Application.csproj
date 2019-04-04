@@ -5,13 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehicleTracker.VehicleData.Domain\VehicleTracker.VehicleData.Domain.csproj" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\automapper\8.0.0\lib\netstandard2.0\AutoMapper.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\VehicleTracker.VehicleData.Domain\VehicleTracker.VehicleData.Domain.csproj" />
   </ItemGroup>
 
 </Project>

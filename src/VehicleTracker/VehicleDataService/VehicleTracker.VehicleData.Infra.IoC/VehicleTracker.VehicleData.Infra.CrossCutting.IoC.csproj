@@ -5,21 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
-    <ProjectReference Include="..\VehicleTracker.VehicleData.Application\VehicleTracker.VehicleData.Application.csproj" />
-    <ProjectReference Include="..\VehicleTracker.VehicleData.Infra.Data\VehicleTracker.VehicleData.Infra.Data.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.AspNetCore.Http">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.http.abstractions\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
+    <ProjectReference Include="..\VehicleTracker.VehicleData.Application\VehicleTracker.VehicleData.Application.csproj" />
+    <ProjectReference Include="..\VehicleTracker.VehicleData.Infra.Data\VehicleTracker.VehicleData.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

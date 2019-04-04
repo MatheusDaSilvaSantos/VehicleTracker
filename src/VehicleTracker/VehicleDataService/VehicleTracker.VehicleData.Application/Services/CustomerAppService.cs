@@ -35,7 +35,7 @@ namespace VehicleTracker.VehicleData.Application.Services
             return _mapper.Map<CustomerViewModel>(_customerRepository.GetById(id));
         }
 
-        public void Register(CustomerViewModel customerViewModel)
+        public void AddNewCustomer(CustomerViewModel customerViewModel)
         {
             var registerCommand = _mapper.Map<AddNewCustomerCommand>(customerViewModel);
             _bus.SendCommand(registerCommand);

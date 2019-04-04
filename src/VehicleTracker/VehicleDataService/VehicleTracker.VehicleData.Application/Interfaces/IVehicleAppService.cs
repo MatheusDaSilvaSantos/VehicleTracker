@@ -6,7 +6,7 @@ namespace VehicleTracker.VehicleData.Application.Interfaces
 {
     public interface IVehicleAppService : IDisposable
     {
-        void Register(VehicleViewModel vehicleViewModel);
+        void AddNewVehicle(VehicleViewModel vehicleViewModel);
         IEnumerable<VehicleViewModel> GetAll();
         VehicleViewModel GetById(Guid id);
         VehicleViewModel GetByVehicleId(string vehicleId);

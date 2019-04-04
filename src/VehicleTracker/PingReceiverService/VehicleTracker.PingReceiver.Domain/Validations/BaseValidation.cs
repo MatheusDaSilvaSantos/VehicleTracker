@@ -28,7 +28,8 @@ namespace VehicleTracker.PingReceiver.Domain.Validations
 
         protected static bool HaveMinimumTime(TimeSpan pingTime)
         {
-            return pingTime <= DateTime.Now.AddMinutes(-1).TimeOfDay;
+
+            return pingTime > DateTime.Now.AddMinutes(-1).TimeOfDay && pingTime < DateTime.Now.TimeOfDay;
         }
     }
 }

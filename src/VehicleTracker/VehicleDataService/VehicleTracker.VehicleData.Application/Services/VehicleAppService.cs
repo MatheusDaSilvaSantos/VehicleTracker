@@ -40,7 +40,7 @@ namespace VehicleTracker.VehicleData.Application.Services
             return _mapper.Map<VehicleViewModel>(_vehicleRepository.GetByVehicleId(vehicleId));
         }
 
-        public void Register(VehicleViewModel vehicleViewModel)
+        public void AddNewVehicle(VehicleViewModel vehicleViewModel)
         {
             var registerCommand = _mapper.Map<AddNewVehicleCommand>(vehicleViewModel);
             _bus.SendCommand(registerCommand);
