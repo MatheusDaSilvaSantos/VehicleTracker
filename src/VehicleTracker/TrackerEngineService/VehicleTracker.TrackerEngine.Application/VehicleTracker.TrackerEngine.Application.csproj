@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
+    <ProjectReference Include="..\VehicleTracker.TrackerEngine.Infra.Data\VehicleTracker.TrackerEngine.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

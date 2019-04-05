@@ -28,12 +28,12 @@ namespace VehicleTracker.PingReceiver.Application.Services
 
         }
 
-       
+
         public Task SendPingMessageAsync(PingViewModel pingViewModel)
         {
             var pingCommand = _mapper.Map<PingCommand>(pingViewModel);
-            Bus.SendCommand(pingCommand);
-            return _sendMessagesService.SendMessageAsync(pingCommand);
+            return Bus.SendCommand(pingCommand);
+            //return _sendMessagesService.SendMessageAsync(pingCommand);
         }
 
     }

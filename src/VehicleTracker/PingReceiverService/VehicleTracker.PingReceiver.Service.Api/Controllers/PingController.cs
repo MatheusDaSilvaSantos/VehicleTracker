@@ -27,8 +27,8 @@ namespace VehicleTracker.PingReceiver.Service.Api.Controllers
 
 
         [HttpPost]
-        [SwaggerOperation(OperationId = "Ping")]
-        [SwaggerResponse(statusCode: (int)HttpStatusCode.OK, Description = "response of adding Ping")]
+        [SwaggerOperation("Ping")]
+        [SwaggerResponse(statusCode: (int)HttpStatusCode.OK, Description = "response of sending Ping")]
         [SwaggerResponse(statusCode: (int)HttpStatusCode.BadRequest, Description = "Invalid parameters")]
         public async Task<IActionResult> Post([FromBody]PingViewModel pingViewModel)
         {

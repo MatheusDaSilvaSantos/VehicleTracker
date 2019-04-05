@@ -25,8 +25,6 @@ namespace VehicleTracker.PingReceiver.Infra.Data.ServiceBusService
             var connectionString = _configuration.GetSection("StorageConnectionString").Value;
             var queueName = _configuration.GetSection("QueueName").Value;
 
-
-
             var storageAccount = CloudStorageAccount.Parse(connectionString);
 
             // Create the queue client.
