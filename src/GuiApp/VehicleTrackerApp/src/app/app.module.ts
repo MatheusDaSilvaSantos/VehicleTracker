@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { VehicleTrackerService } from './shared/services/VehicleTracker.Service';
 import { SignalRService } from './shared/services/signal-r.service';
+import { TableFilterPipe } from './shared/pipes/table-filter.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     VehicleTrackeComponent,
-    VehicleTrackerListComponent
+    VehicleTrackerListComponent,
+    TableFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,19 +1,38 @@
- <table class="table">
-  <thead class="table-dark">
-  <tr>
-      <td scope="col" >Vehicle Id</td>
-      <td>RegNumber</td>
-      <td>customer Name</td>
-      <td>Status</td>
-  </tr>
-  </thead>
+<div>
+  <div>
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+      placeholder="&#61442;  Start searching for a vehicle by id or customer name or reg number or status">
+  </div>
+</div>
+<br />
+<br />
 
-  <tbody class="table table-hover">
-      <tr *ngFor="let vehicle of vehicles"  [ngClass]="vehicle.status ? 'table-success' : 'table-danger'">
-          <td>{{ vehicle.vehicleId }}</td>
-          <td>{{ vehicle.regNumber }}</td>
-          <td>{{ getCustomerName(vehicle.customerId) }}</td>
-          <td>{{ vehicle.status ? 'Connected' :  'Disconnected' }}</td>
+<div>
+
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <td scope="col">Vehicle Id</td>
+        <td>RegNumber</td>
+        <td>customer Name</td>
+        <td>Status</td>
       </tr>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody class="table table-hover">
+      <tr *ngFor="let vehicle of vehicles | tableFilter: {
+        vehicleId: searchText,
+        regNumber: searchText,
+        customerName: searchText,
+        statusString: searchText
+      }"
+        [ngClass]="vehicle.status ? 'table-success' : 'table-danger'">
+        <td>{{ vehicle.vehicleId }}</td>
+        <td>{{ vehicle.regNumber }}</td>
+        <!-- <td>{{ getCustomerName(vehicle.customerId) }}</td> -->
+        <td>{{ vehicle.customerName }}</td>
+        <td>{{ vehicle.status ? 'Connected' :  'Disconnected' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

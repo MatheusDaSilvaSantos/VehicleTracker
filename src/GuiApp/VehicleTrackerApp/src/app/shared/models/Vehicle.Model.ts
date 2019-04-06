@@ -5,4 +5,5 @@ export class Vehicle {
     customerId: string;  
     customerName: string;  
     status: boolean;  
+    statusString: string;  
 }

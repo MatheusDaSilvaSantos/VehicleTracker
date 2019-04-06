@@ -93,6 +93,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleTracker.TrackerEngin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracker.TrackerEngine.PingQueueTrigger", "TrackerEngineService\VehicleTracker.TrackerEngine.PingQueueTrigger\VehicleTracker.TrackerEngine.PingQueueTrigger.csproj", "{B5746C42-D82D-4F22-B969-0B4804A186DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VehicleSimulator", "VehicleSimulator", "{7C18E6FE-FB2D-4853-A5C8-526DB9FCA9E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTracke.VehicleSimulator.FunctionTrigger", "VehicleSimulator\VehicleTracke.VehicleSimulator.FunctionTrigger\VehicleTracke.VehicleSimulator.FunctionTrigger.csproj", "{6FFE9465-1CDB-4225-9A53-30DC74A4D873}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +179,10 @@ Global
 		{B5746C42-D82D-4F22-B969-0B4804A186DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5746C42-D82D-4F22-B969-0B4804A186DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5746C42-D82D-4F22-B969-0B4804A186DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFE9465-1CDB-4225-9A53-30DC74A4D873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFE9465-1CDB-4225-9A53-30DC74A4D873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFE9465-1CDB-4225-9A53-30DC74A4D873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFE9465-1CDB-4225-9A53-30DC74A4D873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -224,6 +232,8 @@ Global
 		{77DC8AF6-01F7-4C80-8517-E302C4087BF3} = {31F3C147-C873-40ED-B01B-26499C580261}
 		{65437137-39E6-4811-909A-FF878EBD116C} = {60B44136-D85A-46DF-BDC7-D92065EC3855}
 		{B5746C42-D82D-4F22-B969-0B4804A186DA} = {7F127BE5-9AFD-487A-A01D-CECE78EAFB0E}
+		{7C18E6FE-FB2D-4853-A5C8-526DB9FCA9E1} = {88E0C273-43F3-47E1-8810-C8E4872FDA04}
+		{6FFE9465-1CDB-4225-9A53-30DC74A4D873} = {7C18E6FE-FB2D-4853-A5C8-526DB9FCA9E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {519D33D7-A24D-4DFC-88A2-648376180143}

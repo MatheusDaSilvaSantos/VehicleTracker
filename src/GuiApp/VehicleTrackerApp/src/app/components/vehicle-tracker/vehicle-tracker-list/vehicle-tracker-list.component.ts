@@ -15,6 +15,7 @@ import { SignalRService } from '../../../shared/services/signal-r.service';
 })
 export class VehicleTrackerListComponent implements OnInit {
 
+    public searchText: string;
     customers: Customer[];
     vehicles: Vehicle[];
     vehicleStatusList: VehicleStatus[];
@@ -28,7 +29,6 @@ export class VehicleTrackerListComponent implements OnInit {
 
     ngOnInit() {
         this.getVehicles();
-        this.getCustomers();
 
         this.subscribeToEvents();
         this.signalRService.connectionEstablished.subscribe(() => {
@@ -43,19 +43,20 @@ export class VehicleTrackerListComponent implements OnInit {
     }
 
     private getVehicles(): void {
-
         this.vehicleTrackerService
             .getAllVehicles()
             .subscribe((res: any) => {
                 //debugger;
                 console.log(res);
                 this.vehicles = res.data;
+                this.getCustomers();
                 console.log(this.vehicles);
             },
                 err => {
                     debugger;
                     console.log(err);
                 });
+
     }
 
 
@@ -66,6 +67,7 @@ export class VehicleTrackerListComponent implements OnInit {
                 //debugger;
                 console.log(res);
                 this.customers = res.data;
+                this.updateVehiclesInitData();
             },
                 err => {
                     debugger;
@@ -74,6 +76,13 @@ export class VehicleTrackerListComponent implements OnInit {
 
     }
 
+    private updateVehiclesInitData(): void {
+        var that = this;
+        this.vehicles.forEach(function (vehicle) {
+            vehicle.customerName = that.getCustomerName(vehicle.customerId);
+            vehicle.statusString = vehicle.status ? 'Connected' : 'Disconnected';
+        });
+    }
 
     private subscribeToEvents(): void {
         this.signalRService.statusReceived.subscribe((data: VehicleStatus[]) => {
@@ -84,15 +93,27 @@ export class VehicleTrackerListComponent implements OnInit {
     }
 
     private updateVehiclesStatus(vehicleStatusData: VehicleStatus[]): void {
-        for (let statusItem of vehicleStatusData) {
+        var that = this;
+        vehicleStatusData.forEach(function (statusItem) {
             debugger;
             console.log(statusItem);
-            let vehicleIndex = this.vehicles.findIndex(v => v.vehicleId == statusItem.vehicleId);
-            if (this.vehicles[vehicleIndex] != null) {
-                this.vehicles[vehicleIndex].status = statusItem.status
+            let vehicleIndex = that.vehicles.findIndex(v => v.vehicleId == statusItem.vehicleId);
+            if (that.vehicles[vehicleIndex] != null) {
+                that.vehicles[vehicleIndex].status = statusItem.status
             }
             debugger;
-            console.log(this.vehicles[vehicleIndex]);
-        }
+            console.log(that.vehicles[vehicleIndex]);
+        });
+
+        // for (let statusItem of vehicleStatusData) {
+        //     debugger;
+        //     console.log(statusItem);
+        //     let vehicleIndex = this.vehicles.findIndex(v => v.vehicleId == statusItem.vehicleId);
+        //     if (this.vehicles[vehicleIndex] != null) {
+        //         this.vehicles[vehicleIndex].status = statusItem.status
+        //     }
+        //     debugger;
+        //     console.log(this.vehicles[vehicleIndex]);
+        // }
     }
 }
