@@ -45,7 +45,22 @@ namespace VehicleTracker.TrackerEngine.Service.Api.Controllers
 
 
         [HttpGet]
-        [Route("{id:guid}")]
+        [Route("VehiclesStatus")]
+        [SwaggerOperation(OperationId = "GetVehiclesStatus")]
+        [SwaggerResponse(statusCode: (int)HttpStatusCode.OK, Type = typeof(IEquatable<VehiclePingHistory>))]
+        [SwaggerResponse(statusCode: (int)HttpStatusCode.BadRequest, Description = "Invalid parameters")]
+        [SwaggerResponse(statusCode: (int)HttpStatusCode.NotFound, Description = "the Vehicle Ping History not found")]
+        public IActionResult GetStatus()
+        {
+            var vehicleHistoryData = _vehiclePingAppService.GetAllVehiclesConnectionStatus();
+
+            return Response(vehicleHistoryData);
+        }
+
+
+
+        [HttpGet]
+        [Route("VehiclePingHistory/{id:guid}")]
         [SwaggerOperation(OperationId = "GetVehiclePingHistory")]
         [SwaggerResponse(statusCode: (int)HttpStatusCode.OK, Type = typeof(VehiclePingHistory))]
         [SwaggerResponse(statusCode: (int)HttpStatusCode.BadRequest, Description = "Invalid parameters")]

@@ -8,4 +8,6 @@
         public string PingTime { get; set; }
         public string When { get; set; }
     }
+
+
 }

@@ -14,6 +14,7 @@ using VehicleTracker.TrackerEngine.Domain.EventHandlers;
 using VehicleTracker.TrackerEngine.Domain.Events;
 using VehicleTracker.TrackerEngine.Domain.Interfaces;
 using VehicleTracker.TrackerEngine.Domain.Models;
+using VehicleTracker.TrackerEngine.Domain.StatusService;
 using VehicleTracker.TrackerEngine.Infra.Data.Context;
 using VehicleTracker.TrackerEngine.Infra.Data.EventSourcing;
 using VehicleTracker.TrackerEngine.Infra.Data.Repository;
@@ -35,6 +36,8 @@ namespace VehicleTracker.TrackerEngine.CrossCutting.IoC
 
             // Application
             services.AddScoped<IVehiclePingAppService, VehiclePingAppService>();
+            services.AddScoped<IVehiclesConnectionStatusService, VehiclesConnectionStatusService>();
+
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();

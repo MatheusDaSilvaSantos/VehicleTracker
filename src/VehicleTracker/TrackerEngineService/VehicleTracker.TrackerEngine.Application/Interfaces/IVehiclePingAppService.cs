@@ -10,5 +10,6 @@ namespace VehicleTracker.TrackerEngine.Application.Interfaces
     {
         void ReceivePingMessage(VehiclePingViewModel pingViewModel);
         IList<VehiclePingHistoryData> GetAllHistory(Guid id);
+        IList<VehicleConnectionStatusViewModel> GetAllVehiclesConnectionStatus();
     }
 }

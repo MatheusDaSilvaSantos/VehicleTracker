@@ -33,6 +33,7 @@ namespace VehicleTracker.VehicleData.Service.Api.Controllers
             return Response(_vehicleAppService.GetAll());
         }
 
+
         [HttpGet]
         [Route("{id:guid}")]
         [SwaggerOperation(OperationId = "GetVehicle")]
@@ -91,6 +92,8 @@ namespace VehicleTracker.VehicleData.Service.Api.Controllers
 
             return Response();
         }
+
+
 
     }
 }
