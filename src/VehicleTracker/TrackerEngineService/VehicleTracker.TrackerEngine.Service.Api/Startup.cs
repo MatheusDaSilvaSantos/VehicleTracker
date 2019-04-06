@@ -41,6 +41,23 @@ namespace VehicleTracker.TrackerEngine.Service.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin",
+                    builder => builder.AllowAnyOrigin());
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyMethod()
+                        .AllowCredentials()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
+
+
             services.AddMvc(options =>
                       {
                           options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());
@@ -89,6 +106,7 @@ namespace VehicleTracker.TrackerEngine.Service.Api
                 app.UseHsts();
             }
 
+            app.UseCors("AllowOrigin");
             app.UseCors(c =>
             {
                 c.AllowAnyOrigin();

@@ -10,6 +10,7 @@ namespace VehicleTracker.Abstract.Domain.Core.Interfaces
         Task<T> GetAsync(string partitionKey, string rowKey);
         Task DeleteAsync(string partitionKey, string rowKey);
         Task<IList<T>> GetAllAsync();
+        IList<T> GetAll();
         Task<IList<T>> GetAllAsync(string partitionKey);
     }
 }

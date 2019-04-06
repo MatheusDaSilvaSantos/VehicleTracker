@@ -31,6 +31,11 @@ namespace VehicleTracker.TrackerEngine.Infra.Data.Repository
             var q = await QueryAllAsync();
             return q;
         }
+        public virtual  IList<T> GetAll()
+        {
+            var q =  QueryAllAsync().Result;
+            return q;
+        }
         public virtual async Task<IList<T>> GetAllAsync(string partitionKey)
         {
             var q = await QuerybyPkAsync(partitionKey);
@@ -81,6 +86,7 @@ namespace VehicleTracker.TrackerEngine.Infra.Data.Repository
         public virtual async Task SaveAsync(T entity)
         {
             var op = TableOperation.InsertOrMerge(entity);
+            //var op = TableOperation.InsertOrReplace(entity);
             await _CloudTable.ExecuteAsync(op);
         }
 

@@ -7,7 +7,7 @@ namespace VehicleTracker.PingReceiver.Domain.Validations
         public PingCommandValidation()
         {
             ValidateVehicleId();
-            ValidatePingTime();
+            //ValidatePingTime();
         }
     }
 }

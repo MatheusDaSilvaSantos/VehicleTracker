@@ -1,0 +1,19 @@
+ <table class="table">
+  <thead class="table-dark">
+  <tr>
+      <td scope="col" >Vehicle Id</td>
+      <td>RegNumber</td>
+      <td>customer Name</td>
+      <td>Status</td>
+  </tr>
+  </thead>
+
+  <tbody class="table table-hover">
+      <tr *ngFor="let vehicle of vehicles"  [ngClass]="vehicle.status ? 'table-success' : 'table-danger'">
+          <td>{{ vehicle.vehicleId }}</td>
+          <td>{{ vehicle.regNumber }}</td>
+          <td>{{ getCustomerName(vehicle.customerId) }}</td>
+          <td>{{ vehicle.status ? 'Connected' :  'Disconnected' }}</td>
+      </tr>
+  </tbody>
+</table>

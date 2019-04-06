@@ -23,7 +23,7 @@ namespace VehicleTracker.TrackerEngine.Domain.StatusService
             var response = new List<VehicleConnectionStatusModel>();
 
 
-            var allVehiclesPingData = _vehiclesConnectionStatusRepository.GetAllAsync().Result;
+            var allVehiclesPingData = _vehiclesConnectionStatusRepository.GetAll();
             if (allVehiclesPingData != null)
             {
                 foreach (var pingItem in allVehiclesPingData)
@@ -33,7 +33,7 @@ namespace VehicleTracker.TrackerEngine.Domain.StatusService
                     response.Add(new VehicleConnectionStatusModel
                     {
                         VehicleId = pingItem.VehicleId,
-                        Status = GetPingStatus(pingItem.PingTime)
+                        Status = status
                     });
                 }
             }
@@ -45,7 +45,10 @@ namespace VehicleTracker.TrackerEngine.Domain.StatusService
         private bool GetPingStatus(string pingTimeString)
         {
             DateTime.TryParse(pingTimeString, out var pingTime);
-            var status = pingTime >= DateTime.UtcNow.AddMinutes(-1) && pingTime <= DateTime.UtcNow;
+            var totalMinutes = (DateTime.UtcNow - pingTime).TotalMinutes;
+            var totalDays = (int)(DateTime.UtcNow - pingTime).TotalDays;
+
+            bool status = totalMinutes >= 0 && totalMinutes <= 1 && totalDays == 0;
             return status;
         }
     }
