@@ -5,7 +5,7 @@ namespace VehicleTracker.PingReceiver.Domain.Events
 {
     public class VehiclePingedEvent : Event
     {
-        public VehiclePingedEvent(Guid id, string vehicleId, TimeSpan pingTime)
+        public VehiclePingedEvent(Guid id, string vehicleId, DateTime pingTime)
         {
             VehicleId = vehicleId;
             PingTime = pingTime;
@@ -13,6 +13,6 @@ namespace VehicleTracker.PingReceiver.Domain.Events
         }
         public string VehicleId { get; protected set; }
 
-        public TimeSpan PingTime { get; protected set; }
+        public DateTime PingTime { get; protected set; }
     }
 }

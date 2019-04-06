@@ -25,4 +25,12 @@ namespace VehicleTracker.TrackerEngine.Domain.Models
 
         public string PingTime { get; set; }
     }
+
+
+    public class VehicleConnectionStatusResponse
+    {
+        public string VehicleId { get; set; }
+        public bool Status { get; set; }
+
+    }
 }

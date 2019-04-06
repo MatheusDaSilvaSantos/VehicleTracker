@@ -26,10 +26,9 @@ namespace VehicleTracker.TrackerEngine.Domain.Validations
                 .NotEqual(Guid.Empty);
         }
 
-        protected static bool HaveMinimumTime(TimeSpan pingTime)
+        protected static bool HaveMinimumTime(DateTime pingTime)
         {
-
-            return pingTime > DateTime.Now.AddMinutes(-1).TimeOfDay && pingTime < DateTime.Now.TimeOfDay;
+            return pingTime >= DateTime.UtcNow.AddMinutes(-1) && pingTime <= DateTime.UtcNow;
         }
     }
 }

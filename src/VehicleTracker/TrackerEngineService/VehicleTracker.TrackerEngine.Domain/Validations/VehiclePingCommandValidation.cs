@@ -7,7 +7,7 @@ namespace VehicleTracker.TrackerEngine.Domain.Validations
         public VehiclePingCommandValidation()
         {
             ValidateVehicleId();
-            ValidatePingTime();
+            //ValidatePingTime();
         }
     }
 }

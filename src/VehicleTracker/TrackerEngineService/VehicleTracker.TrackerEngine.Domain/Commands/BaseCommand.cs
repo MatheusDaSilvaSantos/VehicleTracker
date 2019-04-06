@@ -7,6 +7,6 @@ namespace VehicleTracker.TrackerEngine.Domain.Commands
     {
         public Guid Id { get; protected set; }
         public string VehicleId { get; protected set; }
-        public TimeSpan PingTime { get; protected set; }
+        public DateTime PingTime { get; protected set; }
     }
 }

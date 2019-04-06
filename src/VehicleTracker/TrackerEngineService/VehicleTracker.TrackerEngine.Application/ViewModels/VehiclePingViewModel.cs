@@ -7,12 +7,12 @@ namespace VehicleTracker.TrackerEngine.Application.ViewModels
         public VehiclePingViewModel()
         {
             Id = Guid.NewGuid();
-            PingTime = DateTime.Now.TimeOfDay;
+            PingTime = DateTime.Now;
         }
         public Guid Id { get; set; }
 
         public string VehicleId { get; set; }
 
-        public TimeSpan PingTime { get; set; }
+        public DateTime PingTime { get; set; }
     }
 }

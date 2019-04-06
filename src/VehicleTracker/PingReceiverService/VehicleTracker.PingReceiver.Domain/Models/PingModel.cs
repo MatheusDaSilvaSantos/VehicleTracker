@@ -5,7 +5,7 @@ namespace VehicleTracker.PingReceiver.Domain.Models
 {
     public class PingModel : Entity
     {
-        public PingModel(Guid id, string vehicleId, TimeSpan pingTime)
+        public PingModel(Guid id, string vehicleId, DateTime pingTime)
         {
             Id = id;
             VehicleId = vehicleId;
@@ -15,6 +15,6 @@ namespace VehicleTracker.PingReceiver.Domain.Models
 
         public string VehicleId { get; protected set; }
 
-        public TimeSpan PingTime { get; protected set; }
+        public DateTime PingTime { get; protected set; }
     }
 }

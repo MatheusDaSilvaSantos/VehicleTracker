@@ -59,7 +59,7 @@ namespace VehicleTracker.PingReceiver.Infra.Data.ServiceBusService
 
         private static CloudQueueMessage WrapWithMessageId<T>(T payload, string messageId, string label)
         {
-            string text = JsonConvert.SerializeObject(payload);
+            var text = JsonConvert.SerializeObject(payload);
 
             //UTF8Encoding utf8 = new UTF8Encoding();
             //byte[] bytes = utf8.GetBytes(text);

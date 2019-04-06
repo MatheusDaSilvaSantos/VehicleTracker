@@ -6,7 +6,7 @@ namespace VehicleTracker.TrackerEngine.Domain.Models
 
     public class VehiclePing : Entity
     {
-        public VehiclePing(Guid id, string vehicleId, TimeSpan pingTime)
+        public VehiclePing(Guid id, string vehicleId, DateTime pingTime)
         {
             Id = id;
             VehicleId = vehicleId;
@@ -15,6 +15,6 @@ namespace VehicleTracker.TrackerEngine.Domain.Models
         }
         public string VehicleId { get; protected set; }
 
-        public TimeSpan PingTime { get; protected set; }
+        public DateTime PingTime { get; protected set; }
     }
 }

@@ -5,7 +5,7 @@ namespace VehicleTracker.TrackerEngine.Domain.Commands
 {
     public class VehiclePingCommand : BaseCommand
     {
-        public VehiclePingCommand(Guid id, string vehicleId, TimeSpan pingTime)
+        public VehiclePingCommand(Guid id, string vehicleId, DateTime pingTime)
         {
             Id = id;
             VehicleId = vehicleId;

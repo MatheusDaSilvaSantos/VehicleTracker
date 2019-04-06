@@ -6,7 +6,7 @@ namespace VehicleTracker.PingReceiver.Domain.Commands
 {
     public class PingCommand : BaseCommand
     {
-        public PingCommand(Guid id, string vehicleId, TimeSpan pingTime)
+        public PingCommand(Guid id, string vehicleId, DateTime pingTime)
         {
             Id = id;
             VehicleId = vehicleId;

@@ -9,6 +9,6 @@ namespace VehicleTracker.PingReceiver.Domain.Commands
 
         public string VehicleId { get; protected set; }
 
-        public TimeSpan PingTime { get; protected set; }
+        public DateTime PingTime { get; protected set; }
     }
 }
