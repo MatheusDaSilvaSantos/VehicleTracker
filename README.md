@@ -19,7 +19,7 @@ Also you can run the Project in Visual Studio Code (Windows, Linux or MacOS).
 
 # Solution architectural diagram
 
-<img src="url" alt="Solution architectural diagram"> 
+<img src="documents/VehicleTracker solution architectural sketch.png" alt="Solution architectural diagram"> 
 
 # Solution Behaviors
 
