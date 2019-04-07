@@ -31,15 +31,6 @@ Also you can run the Project in Visual Studio Code (Windows, Linux or MacOS).
 - **TrackerEngineService** will be dequeuing the message from the queue and add or update the ping time in an **Azure storage table**  to get the status from it easily and will bush the status notification via **SignalR Hub** connected to the GUI (ann Angualr 7 SPA app).
 
 
-```mermaid
-graph LR
-vcl((Vehicle)) -- Ping throuh --> ping[Ping Api]
-ping -- Send message --> bus(Azure service bus)
-bus --> qt
-qt[Queue trigger function] -- listin to queue --> eng[Tracker engine Api]
-```
-
-
 # how to run the project
 
  - 1 - run the azure storegae emilator.
@@ -83,3 +74,4 @@ for the **Back-End** projects:
 - Event Sourcing
 - Unit of Work
 - Repository and Generic Repository
+
