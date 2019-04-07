@@ -24,9 +24,9 @@ Also you can run the Project in Visual Studio Code (Windows, Linux or MacOS).
 # Solution Behaviors
 
 -  Every vehicle should call an API **PingReceiverService** to send information about itself like (Id, Auth token for validation) .
-	>  The authentication and authorization is out of scope here.
+	--  The authentication and authorization is out of scope here.
 -  **PingReceiverService**  will send a message to a service bus.
-	> (will use **Azure storage emulator queue **  to be able to develop it locally as an alternative to Azure service bus).
+	-- (will use **Azure storage emulator queue **  to be able to develop it locally as an alternative to Azure service bus).
 - **PingQueueTrigger** it's an Azure function queue trigger will listen to the queue and then, will send the received message to the **TrackerEngineService** to perform the tracking connection status logic .
 - **TrackerEngineService** will be dequeuing the message from the queue and add or update the ping time in an **Azure storage table**  to get the status from it easily and will bush the status notification via **SignalR Hub** connected to the GUI (ann Angualr 7 SPA app).
 
@@ -47,7 +47,7 @@ for the **Back-End** projects:
 	 -  VehicleTracke.VehicleSimulator.FunctionTrigger
 	 
  for the **Front-End**  (Angular 7 application )
- - 4 - go to `gui dir` and Run `npm install` 
+ - 4 - go to `src/GuiApp/VehicleTrackerApp` and Run `npm install` 
  - Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
