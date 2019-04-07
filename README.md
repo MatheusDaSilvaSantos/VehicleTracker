@@ -10,8 +10,8 @@
 - You will need the latest Visual Studio 2017 and the .NET Core SDK 2.2.
 - **Please check if you have installed the same runtime version (SDK) described in global.json**
 - You will need the latest version of **Azure Storage Emulator**.
-- > You can find **Azure Storage Emulator** and how to configuer it here [Azure storage emulator for development and testing]([https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)).
-- >   Also you can find  **Azure Storage Explorer**  to be able to view the queue and table data here  [# Azure Storage Explorer]([https://azure.microsoft.com/en-us/features/storage-explorer/](https://azure.microsoft.com/en-us/features/storage-explorer/))).
+	- You can find **Azure Storage Emulator** and how to configuer it here [Azure storage emulator for development and testing]([https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)).
+	- Also you can find  **Azure Storage Explorer**  to be able to view the queue and table data here  [# Azure Storage Explorer]([https://azure.microsoft.com/en-us/features/storage-explorer/](https://azure.microsoft.com/en-us/features/storage-explorer/))).
 - The latest SDK and tools can be downloaded from https://dot.net/core.
 
 
@@ -24,9 +24,9 @@ Also you can run the Project in Visual Studio Code (Windows, Linux or MacOS).
 # Solution Behaviors
 
 -  Every vehicle should call an API **PingReceiverService** to send information about itself like (Id, Auth token for validation) .
-	--  The authentication and authorization is out of scope here.
+	>  The authentication and authorization is out of scope here.
 -  **PingReceiverService**  will send a message to a service bus.
-	-- (will use **Azure storage emulator queue **  to be able to develop it locally as an alternative to Azure service bus).
+	> (will use **Azure storage emulator queue **  to be able to develop it locally as an alternative to Azure service bus).
 - **PingQueueTrigger** it's an Azure function queue trigger will listen to the queue and then, will send the received message to the **TrackerEngineService** to perform the tracking connection status logic .
 - **TrackerEngineService** will be dequeuing the message from the queue and add or update the ping time in an **Azure storage table**  to get the status from it easily and will bush the status notification via **SignalR Hub** connected to the GUI (ann Angualr 7 SPA app).
 
