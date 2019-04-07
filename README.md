@@ -61,6 +61,7 @@ for the **Back-End** projects:
 - AutoMapper
 - FluentValidator
 - MediatR
+- SignalR
 - Swagger UI
 - Angualr 7
 
