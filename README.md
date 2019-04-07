@@ -10,8 +10,8 @@
 - You will need the latest Visual Studio 2017 and the .NET Core SDK 2.2.
 - **Please check if you have installed the same runtime version (SDK) described in global.json**
 - You will need the latest version of **Azure Storage Emulator**.
-	- You can find **Azure Storage Emulator** and how to configuer it here [Azure storage emulator for development and testing]([https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator)).
-	- Also you can find  **Azure Storage Explorer**  to be able to view the queue and table data here  [# Azure Storage Explorer]([https://azure.microsoft.com/en-us/features/storage-explorer/](https://azure.microsoft.com/en-us/features/storage-explorer/))).
+	> You can find **Azure Storage Emulator** and how to configuer it here [Azure storage emulator for development and testing](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator).
+	> Also you can find  **Azure Storage Explorer**  to be able to view the queue and table data here  [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/).
 - The latest SDK and tools can be downloaded from https://dot.net/core.
 
 
@@ -39,7 +39,7 @@ for the **Back-End** projects:
 -  2 - Run `Update-Database` in this projects:
 	  - VehicleTracker.VehicleData.Infra.Data
 	  - VehicleTracker.TrackerEngine.Infra.Data
- -  3 - you need to setartup this projects :
+ -  3 - you need to startup this projects :
 	  - VehicleTracker.PingReceiver.Service.Api
 	 -  VehicleTracker.TrackerEngine.Service.Api
 	 -  VehicleTracker.TrackerEngine.PingQueueTrigger
@@ -57,7 +57,7 @@ for the **Back-End** projects:
  - ASP.NET WebApi Core
 - Entity Framework Core 2.2
 - .NET Core Native DI
--  Azure Storage ( Queue, Table)
+-  Azure Storage (Queue, Table)
 - AutoMapper
 - FluentValidator
 - MediatR
@@ -75,4 +75,5 @@ for the **Back-End** projects:
 - Event Sourcing
 - Unit of Work
 - Repository and Generic Repository
+
 
