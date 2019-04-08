@@ -45,6 +45,7 @@ for the **Back-End** projects:
 	 -  VehicleTracker.TrackerEngine.PingQueueTrigger
 	 -  VehicleTracker.VehicleData.Service.Api
 	 -  VehicleTracke.VehicleSimulator.FunctionTrigger
+	 -  VehicleTracker.Service.ApiGateway
 	 
  for the **Front-End**  (Angular 7 application )
  - 4 - go to `src/GuiApp/VehicleTrackerApp` and Run `npm install` 
@@ -63,6 +64,7 @@ for the **Back-End** projects:
 - MediatR
 - SignalR
 - Swagger UI
+- MS Unit Testing 
 - Angualr 7
 
 ## Architecture:

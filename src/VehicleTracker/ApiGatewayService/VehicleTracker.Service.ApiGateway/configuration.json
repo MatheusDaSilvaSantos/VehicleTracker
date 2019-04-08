@@ -1,7 +1,7 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/v1/customer",
+      "DownstreamPathTemplate": "/api/v1/Customer",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,8 +9,20 @@
           "Port": 44302
         }
       ],
-      "UpstreamPathTemplate": "/customers",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamPathTemplate": "/Customer",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Vehicle",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/Vehicle",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
     {
       "DownstreamPathTemplate": "/api/v1/Ping",
@@ -21,8 +33,32 @@
           "Port": 44301
         }
       ],
-      "UpstreamPathTemplate": "/ping",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamPathTemplate": "/Ping",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/v1/Tracker",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44303
+        }
+      ],
+      "UpstreamPathTemplate": "/Tracker",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/PingingHub",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56645
+        }
+      ],
+      "UpstreamPathTemplate": "/PingingHub",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {

@@ -5,20 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
-    <ProjectReference Include="..\VehicleTracker.TrackerEngine.Application\VehicleTracker.TrackerEngine.Application.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.AspNetCore.Http">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\microsoft.aspnetcore.http\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\microsoft.aspnetcore.http.abstractions\2.0.1\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
+    <ProjectReference Include="..\VehicleTracker.TrackerEngine.Application\VehicleTracker.TrackerEngine.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,10 +12,4 @@
     <ProjectReference Include="..\..\SharedKernel\VehicleTracker.Abstract.Domain.Core\VehicleTracker.Abstract.Domain.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="Microsoft.WindowsAzure.Storage">
-      <HintPath>..\..\..\..\..\..\..\..\Users\bhi\.nuget\packages\windowsazure.storage\8.6.0\lib\netstandard1.3\Microsoft.WindowsAzure.Storage.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

@@ -27,7 +27,7 @@ export class VehicleTrackerService {
     // this.http.get(this.vehiclesUrl)
     // .toPromise()
     // .then(res => {
-    //   debugger;
+    //   
 
     //   this.vehicleList = res as Vehicle[]
     // });

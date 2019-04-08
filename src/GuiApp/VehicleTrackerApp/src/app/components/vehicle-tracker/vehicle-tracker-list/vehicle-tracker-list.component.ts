@@ -46,14 +46,14 @@ export class VehicleTrackerListComponent implements OnInit {
         this.vehicleTrackerService
             .getAllVehicles()
             .subscribe((res: any) => {
-                //debugger;
+                //
                 console.log(res);
                 this.vehicles = res.data;
                 this.getCustomers();
                 console.log(this.vehicles);
             },
                 err => {
-                    debugger;
+                    
                     console.log(err);
                 });
 
@@ -64,13 +64,13 @@ export class VehicleTrackerListComponent implements OnInit {
         this.vehicleTrackerService
             .getAllCustomers()
             .subscribe((res: any) => {
-                //debugger;
+                //
                 console.log(res);
                 this.customers = res.data;
                 this.updateVehiclesInitData();
             },
                 err => {
-                    debugger;
+                    
                     console.log(err);
                 });
 
@@ -86,7 +86,7 @@ export class VehicleTrackerListComponent implements OnInit {
 
     private subscribeToEvents(): void {
         this.signalRService.statusReceived.subscribe((data: VehicleStatus[]) => {
-            debugger;
+            
             console.log(data);
             this.updateVehiclesStatus(data);
         });
@@ -95,24 +95,24 @@ export class VehicleTrackerListComponent implements OnInit {
     private updateVehiclesStatus(vehicleStatusData: VehicleStatus[]): void {
         var that = this;
         vehicleStatusData.forEach(function (statusItem) {
-            debugger;
+            
             console.log(statusItem);
             let vehicleIndex = that.vehicles.findIndex(v => v.vehicleId == statusItem.vehicleId);
             if (that.vehicles[vehicleIndex] != null) {
                 that.vehicles[vehicleIndex].status = statusItem.status
             }
-            debugger;
+            
             console.log(that.vehicles[vehicleIndex]);
         });
 
         // for (let statusItem of vehicleStatusData) {
-        //     debugger;
+        //     
         //     console.log(statusItem);
         //     let vehicleIndex = this.vehicles.findIndex(v => v.vehicleId == statusItem.vehicleId);
         //     if (this.vehicles[vehicleIndex] != null) {
         //         this.vehicles[vehicleIndex].status = statusItem.status
         //     }
-        //     debugger;
+        //     
         //     console.log(this.vehicles[vehicleIndex]);
         // }
     }
