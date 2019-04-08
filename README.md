@@ -64,6 +64,7 @@ for the **Back-End** projects:
 - MediatR
 - SignalR
 - Swagger UI
+- Ocelot
 - MS Unit Testing 
 - Angualr 7
 
